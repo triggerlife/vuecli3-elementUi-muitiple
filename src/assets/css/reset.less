@@ -1,0 +1,401 @@
+@import "./global.less";
+// 这个是设置全局的样式重置
+// 设置阴影就添加这个css
+.dz-boxShadow {
+  box-shadow: 0 0 10px 0 rgba(233, 233, 233, 1);
+}
+
+#app {
+  // 重置element的大小和圆角
+  .el-button {
+    width: 110px;
+    height: 40px;
+    padding: 0;
+    border-radius: 6px;
+    font-weight: 400;
+    font-size: 16px;
+    &.el-button--primary {
+      background-color: @header-color;
+      border-color: @header-color;
+      &:hover, &:active {
+        background-color: @button-active-color;
+        border-color: @button-active-color;
+      }
+    }
+    &.el-button--default {
+      border-color: @header-color;
+      background-color: @button-default-bg;
+      color: @header-color;
+      &:hover, &:active {
+        background-color: @header-color;
+        border-color: @header-color;
+        color: @button-default-bg;
+      }
+    }
+    &.el-button--info {
+      border-color: @button-info-color;
+      background-color: @button-info-color;
+      color: @button-default-bg;
+      &:hover, &:active {
+        background-color: @button-info-hover-color;
+        border-color: @button-info-hover-color;
+        color: @button-default-bg;
+      }
+    }
+    &.table-btn {
+      width: 70px;
+      height: 30px;
+      font-size: 14px;
+      span {
+        line-height: 30px;
+      }
+    }
+    span {
+      //display: block;
+    }
+  }
+  .export-btn {
+    width: 120px;
+    height: 40px;
+    font-size: 16px;
+    &:hover, &:active {
+      background-color: @button-active-color;
+      border-color: @button-active-color;
+    }
+    span {
+      display: inline-block;
+    }
+  }
+  .el-button--default {
+    width: 110px;
+    height: 40px;
+    font-size: 16px;
+    &.el-button--primary {
+      background-color: @header-color;
+      border-color: @header-color;
+      &:hover, &:active {
+        background-color: @button-active-color;
+        border-color: @button-active-color;
+      }
+    }
+    &.el-button--default {
+      border-color: @header-color;
+      background-color: @button-default-bg;
+      color: @header-color;
+      &:hover, &:active {
+        background-color: @header-color;
+        border-color: @header-color;
+        color: #fff;
+      }
+    }
+    span {
+      line-height: 40px;
+    }
+    &.is-round {
+      border-radius: 20px;
+    }
+  }
+  .el-button--medium {
+    width: 90px;
+    height: 35px;
+    font-size: 16px;
+    &.el-button--primary {
+      background-color: @header-color;
+      border-color: @header-color;
+      &:hover, &:active {
+        background-color: @button-active-color;
+        border-color: @button-active-color;
+      }
+    }
+    &.el-button--default {
+      border-color: @header-color;
+      background-color: @button-default-bg;
+      color: @header-color;
+      &:hover, &:active {
+        background-color: @header-color;
+        border-color: @header-color;
+        color: #fff;
+      }
+    }
+    &.el-button--info {
+      border-color: @button-info-color;
+      background-color: @button-info-color;
+      color: @button-default-bg;
+      &:hover, &:active {
+        background-color: @button-info-hover-color;
+        border-color: @button-info-hover-color;
+        color: @button-default-bg;
+      }
+    }
+    &.is-round {
+      border-radius: 18px;
+    }
+  }
+  .el-button--small {
+    width: 70px;
+    height: 30px;
+    font-size: 14px;
+    &.el-button--primary {
+      background-color: @header-color;
+      border-color: @header-color;
+      &:hover, &:active {
+        background-color: @button-active-color;
+        border-color: @button-active-color;
+      }
+    }
+    &.el-button--default {
+      border-color: @header-color;
+      background-color: @button-default-bg;
+      color: @header-color;
+      &:hover, &:active {
+        background-color: @header-color;
+        border-color: @header-color;
+        color: #fff;
+      }
+    }
+    &.el-button--info {
+      border-color: @button-info-color;
+      background-color: @button-info-color;
+      color: @button-default-bg;
+      &:hover, &:active {
+        background-color: @button-info-hover-color;
+        border-color: @button-info-hover-color;
+        color: @button-default-bg;
+      }
+    }
+    &.is-round {
+      border-radius: 15px;
+    }
+  }
+  .el-button--mini {
+    width: 60px;
+    height: 25px;
+    font-size: 12px;
+    &.el-button--primary {
+      background-color: @header-color;
+      border-color: @header-color;
+      &:hover, &:active {
+        background-color: @button-active-color;
+        border-color: @button-active-color;
+      }
+    }
+    &.el-button--default {
+      border-color: @header-color;
+      background-color: @button-default-bg;
+      color: @header-color;
+      &:hover, &:active {
+        background-color: @header-color;
+        border-color: @header-color;
+        color: #fff;
+      }
+    }
+    &.el-button--info {
+      border-color: @button-info-color;
+      background-color: @button-info-color;
+      color: @button-default-bg;
+      &:hover, &:active {
+        background-color: @button-info-hover-color;
+        border-color: @button-info-hover-color;
+        color: @button-default-bg;
+      }
+    }
+    &.is-round {
+      border-radius: 13px;
+    }
+  }
+  // 重置输入框边框的颜色
+  .el-input__inner {
+    border-color: @input-border-color;
+    border-radius: 6px;
+  }
+  .el-input__inner:focus, .el-input__inner:hover {
+    border-color: @input-border-active-color;
+  }
+  .el-input.is-focus .el-input__inner {
+    border-color: @input-border-active-color;
+  }
+  // 重置表格hover的背景色
+
+  .el-table--enable-row-hover .el-table__body tr:hover > td {
+    background-color: @table-hover-color;
+    color: @header-color;
+  }
+
+  .el-table--enable-row-hover .el-table__body .btn-line {
+    display: inline-block;
+    padding: 0 35px;
+    height: 30px;
+    line-height: 30px;
+    cursor: pointer;
+    color: @header-color;
+    & > span {
+      padding: 0 4px 5px;
+    }
+  }
+  .el-table--enable-row-hover .el-table__body tr:hover > td .cell .btn-line > span {
+    padding: 0 4px 5px;
+    border-bottom: 1px solid @header-color;
+  }
+  .el-table thead th {
+    background-color: @header-color;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    &:first-child {
+      border-right: none;
+    }
+  }
+  .el-table tbody th {
+    font-size: 14px;
+    font-weight: 400;
+    color: @select-text-color;
+  }
+  .el-table .cell {
+    text-align: center;
+  }
+  // 重置面包屑
+  .el-breadcrumb__item .el-breadcrumb__inner {
+    font-size: 14px;
+    font-weight: 400;
+
+    color: @desc-text-color;
+  }
+  .el-breadcrumb__inner a, .el-breadcrumb__inner.is-link {
+    font-weight: 400;
+    color: @main-text-color;
+  }
+  .el-breadcrumb__inner a:hover, .el-breadcrumb__inner.is-link:hover {
+    color: @main-color;
+  }
+  // 重置单选框
+  .el-radio__input {
+    .el-radio__inner {
+      border-width: 2px;
+    }
+    &.is-checked .el-radio__inner {
+      border-color: @header-color;
+      background-color: @main-bg-color;
+      &:after {
+        width: 5px;
+        height: 5px;
+        background-color: @header-color;
+      }
+    }
+  }
+  // 重置多行输入框
+  .el-textarea__inner {
+    padding: 12px 21px;
+  }
+}
+// 重置表单label颜色和输入框多行输入框的宽度
+.el-form{
+  .el-form-item{
+    margin-bottom: 50px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+    .el-form-item__label{
+      color: @main-text-color;
+    }
+    .el-input {
+      width: 300px;
+    }
+    .el-textarea {
+      width: 800px;
+    }
+  }
+}
+// 重置下拉框
+.el-select-dropdown {
+  box-shadow: 0 0 10px 0 rgba(233, 233, 233, 1);
+  .el-select-dropdown__list {
+    padding: 11px 0;
+    .el-select-dropdown__item {
+      font-size: 14px;
+      font-weight: 300;
+      height: 30px;
+      line-height: 30px;
+      color: @select-text-color;
+      &.hover, &:hover {
+        background-color: @active-color;
+        color: @main-color;
+        font-weight: 300;
+      }
+    }
+  }
+}
+
+// 重置消息提示
+.el-message {
+  padding: 0 0 0 20px;
+  height: 35px;
+  line-height: 35px;
+  &.el-message--success {
+    background-color: @message-success-bg-color;
+    color: @title-text-color;
+    border-color: @message-success-bg-color;
+    .el-message__content {
+      color: @title-text-color;
+    }
+    .el-icon-success {
+      color: @title-text-color;
+    }
+  }
+  &.el-message--error {
+    background-color: @message-error-bg-color;
+    color: @error-text-color;
+    border-color: @message-error-bg-color;
+    .el-message__content {
+      color: @error-text-color;
+    }
+    .el-icon-success {
+      color: @error-text-color;
+    }
+  }
+}
+
+// 弹框
+.el-dialog__wrapper {
+  .el-dialog {
+    width: 520px;
+    .el-dialog__header {
+      padding: 0 21px;
+      height: 70px;
+      line-height: 70px;
+      border-bottom: 1px solid @line-color;
+      .el-dialog__title {
+        font-size: 18px;
+        font-weight: 400;
+        color: @dialog-title-color;
+      }
+      .el-dialog__close {
+        color: #AAAAAA;
+        font-size: 22px;
+      }
+    }
+    .el-dialog__body {
+      padding: 0 40px;
+    }
+  }
+}
+
+// 图片弹框
+.img-dialog-wrapper {
+  .el-dialog {
+    max-width: 900px;
+    min-width: 400px;
+    width: auto;
+    .el-dialog__header{
+      height: 0;
+      border-bottom: none;
+    }
+    .el-dialog__body{
+      padding: 0;
+      font-size: 0;
+      &>img{
+        max-width: 100%;
+      }
+    }
+  }
+}
+
