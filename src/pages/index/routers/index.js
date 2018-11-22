@@ -11,7 +11,7 @@ const router = new Router({
             meta: {name: 'test', show: true},
         },
         {
-            path: '/Login',
+            path: '/login',
             component: resolve => require.ensure([], () => resolve(require('../views/Login.vue')), 'Login'),
             meta: {name: '登录', show: true},
         }
@@ -20,7 +20,7 @@ const router = new Router({
 
 router.beforeEach((to, from, next) => {
     if (to.meta.title) {//如果设置标题，拦截后设置标题
-        document.title = to.meta.title
+        document.title = to.meta.name
     }
     if (to.matched.length === 0) {//匹配不到相对应的路由时，跳转到首页
         to.name ? next({name: to.name}) : next('/')
@@ -29,7 +29,7 @@ router.beforeEach((to, from, next) => {
     //获取Token
     let token = checkToken.getToken()
     //根据字段判断是否路由过滤
-    if (token == null) {
+    if (token == null && to.fullPath !== '/login') {
         window.location.href = '/index.html#/login'
         return;
     }

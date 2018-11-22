@@ -1,6 +1,6 @@
 <template>
-    <div>
-        我是学校端
+    <div class="index-wrapper">
+        我是index页面
     </div>
 </template>
 
@@ -11,5 +11,7 @@
 </script>
 
 <style lang="less">
-
+    .index-wrapper{
+        color: @error-text-color;
+    }
 </style>

@@ -44,10 +44,14 @@ _axios.interceptors.response.use(
             case 401:
             case 402:
             case 403:
+                /*登录提示*/
+                    window.location.href = process.env.VUE_APP_BASE_LOGIN_URL
                 break;
             case 404:
+                /*路径错误提示*/
                 break;
             case 500:
+                /*服务器错误提示*/
                 break
         }
         return response;

@@ -4,10 +4,11 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "./node_modules/.bin/vue-cli-service build --mode production ",
-    "test": "./node_modules/.bin/vue-cli-service build --mode test ",
     "lint": "vue-cli-service lint",
-    "local": "./node_modules/.bin/vue-cli-service build --mode local "
+    "local": "./node_modules/.bin/vue-cli-service build --mode local ",
+    "test": "./node_modules/.bin/vue-cli-service build --mode test ",
+    "build": "./node_modules/.bin/vue-cli-service build --mode production "
+
   },
   "dependencies": {
     "element-ui": "^2.4.5",

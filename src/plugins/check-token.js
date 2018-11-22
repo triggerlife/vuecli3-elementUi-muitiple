@@ -5,7 +5,7 @@ const tokenValid = process.env.VUE_APP_TOKEN_VALID_SECOND;
 const checkToken =  {
     refresh:()=>{
         if(checkToken.getToken()){
-            //保活token 每20分钟换取一次token
+            //保活token 每x-1分钟换取一次token
             window.setInterval(()=> {
                 // console.log("重启定时刷新token")
                 window.axios.post(process.env.VUE_APP_BASE_URL+"/token/refresh-token",{},{

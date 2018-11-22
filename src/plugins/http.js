@@ -35,7 +35,7 @@ export default {
         })
     },
     /**
-     * post请求 用于请求基础云平台数据
+     * basePost请求
      * @param  {String}   url        请求地址 必传
      * @param  {Object}   data       请求参数 必传
      * @param  {Function} callback   请求成功code=0回调函数 必传

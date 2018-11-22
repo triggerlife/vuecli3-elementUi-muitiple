@@ -1,5 +1,5 @@
 <template>
-    <div>教师端</div>
+    <div>我是user页面</div>
 </template>
 
 <script type="text/ecmascript-6">
